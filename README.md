@@ -4,6 +4,7 @@ Repositorio para mi clase de herramientas computacionales.
 # Codigo hecho por Eugenio Castro
 
 - nombres de los alumnos
+```python
 def info_alumnos():
     # agarra el lapiz
     up()
@@ -16,8 +17,9 @@ def info_alumnos():
     goto(0, 170)
     color('pink')
     write('NOMBRE', align='left', font=('Arial', 10, 'normal'))
-    
+```
 - circulo
+```python
 def circle2(start, end):
     "Draw circle from start to end."
     # sube el lapiz
@@ -32,10 +34,12 @@ def circle2(start, end):
     # se hace el circulo
     circle(d/2)
     end_fill()
+```
     
 - nuevo color
+```python
 # color rosa, P para pink
 # color nuevo usando funcion lambda
 onkey(lambda: color('#f633ff'), 'P')
-
+```
 - Este codigo es bastante sencillo pero el proposito de la actividad es practicar a usar github y trabajar en equipo
