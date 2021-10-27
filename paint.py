@@ -36,12 +36,52 @@ def circle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    #levantamos el lápiz
+    up()
+    #vamos a primera coordenada (esquina superior izquierda) 
+    goto(start.x, start.y)
+    #indicamos que nos dirigimos a la izquierda
+    setheading(0)
+    #bajamos el lapiz para empezar a dibujar
+    down()
+    begin_fill()
+    #vamos a la esquina superior derecha
+    goto(end.x, start.y)
+    #giramos 90 grados
+    right(90)
+    #vamos a la esquina inferior derecha
+    goto(end.x, end.y)
+    #giramos 90 grados
+    right(90)
+    #vamos a la esquina inferior izquierda
+    goto(start.x, end.y)
+    #giramos 90 grados
+    right(90)
+    #regresamos a la primera coordenada (esquina superior izquierda) 
+    goto(start.x, start.y)
+    #terminamos de dibujar
+    end_fill()
 
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
+    #levantamos lápiz
+    up()
+    #vamos a primera coordenada
+    goto(start.x, start.y)
+    #bajamos el lápiz para dibujar
+    down()
+    begin_fill()
+
+    #por cada lado del triangulo 
+    for count in range(3):
+        #nos movemos la distancia entre la primera y segunda coordenada en x
+        forward(end.x - start.x)
+        #en un angulo de 120° hacia la izquierda, para terminar tener un triangulo con 3 ángulos de 60°
+        left(120)
+
+    #terminamos de dibujar
+    end_fill()
 
 
 def tap(x, y):
