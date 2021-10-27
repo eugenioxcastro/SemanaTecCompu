@@ -2,6 +2,18 @@ from turtle import *
 
 from freegames import vector
 
+def info_alumnos():
+    # agarra el lapiz
+    up()
+    # se va a esta posicion
+    goto(0, 190)
+    # escoje el color y lo escribe para cada almuno
+    color('blue')
+    write('Eugenio Castro A00830392', align='left', font=('Arial', 10, 'normal'))
+    # nueva posicion para nuevo nombre
+    goto(0, 170)
+    color('pink')
+    write('NOMBRE', align='left', font=('Arial', 10, 'normal'))
 
 def line(start, end):
     "Draw line from start to end."
@@ -29,9 +41,20 @@ def square(start, end):
     end_fill()
 
 
-def circle(start, end):
+def circle2(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    # sube el lapiz
+    up()
+    # mueve a al posicion x, y
+    goto(start.x, start.y)
+    d = end.x - start.x
+    # baja el lapiz
+    down()
+    # empiza el llenado
+    begin_fill()
+    # se hace el circulo
+    circle(d/2)
+    end_fill()
 
 
 def rectangle(start, end):
@@ -69,15 +92,19 @@ print(type(state))
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+info_alumnos()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+# color rosa, P para pink
+# color nuevo usando funcion lambda
+onkey(lambda: color('#f633ff'), 'P')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circle2), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
