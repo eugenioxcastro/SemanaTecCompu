@@ -13,7 +13,7 @@ def info_alumnos():
     # nueva posicion para nuevo nombre
     goto(0, 170)
     color('pink')
-    write('NOMBRE', align='left', font=('Arial', 10, 'normal'))
+    write('Elizabeth Naredo Betancourt A00830440', align='left', font=('Arial', 10, 'normal'))
 
 def line(start, end):
     "Draw line from start to end."
@@ -132,6 +132,7 @@ print(type(state))
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+writer = Turtle(visible=False)
 info_alumnos()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
