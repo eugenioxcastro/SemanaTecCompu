@@ -25,3 +25,35 @@ En función move()
 #dibuja la food
 square(food.x, food.y, 9, color_food)
 ```
+- validar que la comida se mueva cada ciertos movimientos y que no este dentro de snake
+```python
+ #lista de direcciones
+    directions = [(30, 0), (-30, 0), (0, 30), (0, -30)]
+    if movements % 5 == 0:
+        #escoge una dirección random
+        new_direction = choice(directions)
+        #se suma a la posición actual
+        food.x = food.x + new_direction[0]
+        food.y = food.y + new_direction[1]
+        # validacion para que la comida no quede dentro de la serpiente.
+        while food in snake:
+            new_direction = choice(directions)
+            #se suma a la posición actual
+            food.x = food.x + new_direction[0]
+            food.y = food.y + new_direction[1]
+```
+- volver a agregar info_alumnos
+```python
+def info_alumnos():
+    # agarra el lapiz
+    writer.up()
+    # se va a esta posicion
+    writer.goto(0, 150)
+    # escoje el color y lo escribe para cada almuno
+    writer.color('blue')
+    writer.write('Eugenio Castro A00830392', align='left', font=('Arial', 10, 'normal'))
+    # nueva posicion para nuevo nombre
+    writer.goto(0, 130)
+    writer.color('pink')
+    writer.write('Elizabeth Naredo Betancourt A00830440', align='left', font=('Arial', 10, 'normal'))
+```
