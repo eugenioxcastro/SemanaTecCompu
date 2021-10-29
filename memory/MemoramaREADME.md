@@ -82,3 +82,40 @@ onscreenclick(tap)
 draw()
 done()
 ```
+# Alexia Naredo
+Recorre cada elemento de la lista hide buscando que estén false, es decir destapados
+```python
+def unrevealed(hide):
+    for i in hide:
+
+        if (i != False):
+
+            return
+
+    print("Todos los cuatros estan destapados")
+```
+
+En tap, usamos un contador para cada vez que haya uno nuevo y llamamos a la función unrevealed
+
+```python
+def tap(x, y):
+    "Update mark and hidden tiles based on tap."
+    
+    #contador de taps como atributo de función
+    tap.counter += 1
+    print("Número de taps: ", tap.counter)
+
+    #obtiene el indice sobre el cual se dio click
+    spot = index(x, y)
+    #obtiene el estado actual del memorama
+    mark = state['mark']
+    
+    # verifica si son pares o no para dejar de mostrar el recuadro o no
+    if mark is None or mark == spot or tiles[mark] != tiles[spot]:
+        state['mark'] = spot
+    else:
+        hide[spot] = False
+        hide[mark] = False
+        state['mark'] = None
+        
+    unrevealed(hide)
