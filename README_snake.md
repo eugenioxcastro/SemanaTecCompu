@@ -1,4 +1,6 @@
 # SemanaTecCompu
+
+## añdir sus nombres por favor aquí  Calificación 100 👏👏👏
 Repositorio para mi clase de herramientas computacionales.
 
 - Cada vez que se corra el juego, la víbora y la comida deberán tener colores diferentes entre sí,
