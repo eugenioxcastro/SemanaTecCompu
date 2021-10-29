@@ -5,7 +5,7 @@ from freegames import path
 
 contador = 0
 car = path('car.gif')
-tiles = list(range(32)) * 2
+tiles =  ["perro", "gato", "perico", "vaca", "pez payaso", "pez dorado", "serpiente", "mono", "araña", "lobo", "gorila", "lagarto", "leon", "oso", "elefante", "murcielago", "cebra", "panda", "sapo", "tigre", "caballo", "cerdo", "delfin", "venado", "zorro", "mapache", "koala", "hipopotamo", "pavorreal", "camello"] * 2
 state = {'mark': None}
 #lista indica la cantidad de cartas escondidas
 hide = [True] * 64
@@ -92,7 +92,7 @@ def draw():
     ontimer(draw, 100)
 
 # desordena las tiles
-#shuffle(tiles)
+shuffle(tiles)
 # abre la ventana del memorama
 setup(420, 420, 370, 0)
 # añade una imagen al canvas
