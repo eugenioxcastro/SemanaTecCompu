@@ -101,3 +101,5 @@ def rectangle(start, end):
 
 - Este codigo es bastante sencillo pero el proposito de la actividad es practicar a usar github y trabajar en equipo
 
+# Gif
+![Paint Gif](PaintGif.gif)
