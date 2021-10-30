@@ -132,3 +132,6 @@ cambiamos la lista para hacerla mas entretenida para los niños, agregando anima
 ```python
 tiles =  ["perro", "gato", "perico", "vaca", "pez payaso", "pez dorado", "serpiente", "mono", "araña", "lobo", "gorila", "lagarto", "leon", "oso", "elefante", "murcielago", "cebra", "panda", "sapo", "tigre", "caballo", "cerdo", "delfin", "venado", "zorro", "mapache", "koala", "hipopotamo", "pavorreal", "camello"] * 2
 ```
+
+# Gif
+![Memorama Gif](MemoramaGif.gif)
