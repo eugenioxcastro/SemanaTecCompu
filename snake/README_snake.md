@@ -57,3 +57,5 @@ def info_alumnos():
     writer.color('pink')
     writer.write('Elizabeth Naredo Betancourt A00830440', align='left', font=('Arial', 10, 'normal'))
 ```
+# Gif
+![Snake Gif](SnakeGif.gif)
